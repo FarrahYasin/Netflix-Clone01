@@ -1,3 +1,4 @@
+
 import React, {useEffect, useState } from 'react'
 import MovieList from './MovieList'
 import axios from 'axios'
@@ -8,10 +9,12 @@ export default function Home() {
 
 const fetchData = async () => {
   try {
-    const res =await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=f68a5f39bcaebb80be714773fbe6c484`)
+    // const res =await axios.get(`http://localhost:3008/trending`)
+    const res =await axios.get(`https://movies-library-1ryn.onrender.com/trending`)
 
-    console.log(res.data.results);
-    setMovies(res.data.results)
+    
+    console.log(res.data);
+    setMovies(res.data)
 
   } catch(err) {
     console.log(err)
@@ -25,7 +28,12 @@ useEffect(() => {
 
   return (
     <div>
+     
       <MovieList movies={movies} />
+      
     </div>
   )
 }
+
+
+
