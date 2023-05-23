@@ -8,11 +8,16 @@ export default function ModalMovie({ movie, closeModal }) {
 
   const handleAddToFavorite = () => {
     const favoriteMovie = {
+      poster_path: movie.poster_path,
       title: movie.title,
+      release_date : movie.release_date,
+      overview : movie.overview,
       comment: comment
     };
   
-    fetch('http://localhost:3008/addMovie', {
+    // fetch('http://localhost:3008/addMovie', {
+      fetch('https://movies-library-1ryn.onrender.com/addMovie', {
+
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -47,6 +52,7 @@ export default function ModalMovie({ movie, closeModal }) {
         <Modal.Title>{movie.title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
+    
         <img className='img1' src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
         <p>{movie.overview}</p>
         <form onSubmit={handleSubmitComment}>
