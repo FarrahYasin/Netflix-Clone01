@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState } from 'react'
 import MovieList from './MovieList'
+
 import axios from 'axios'
 
 export default function Home() {

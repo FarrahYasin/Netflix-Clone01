@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .modal-header {
     background-color: #f8f9fa;
     border-bottom: none;
