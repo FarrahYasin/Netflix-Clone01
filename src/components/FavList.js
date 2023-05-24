@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 import {useEffect, useState } from 'react'
 import axios from 'axios'
 // import './MovieList.css';
+// import './MovieList.css';
+
 import './fav.css';
 
 
