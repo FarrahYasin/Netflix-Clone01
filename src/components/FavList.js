@@ -1,9 +1,15 @@
+
 import React from 'react';
 import Movie from './Movie';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {useEffect, useState } from 'react'
 import axios from 'axios'
+// import './MovieList.css';
+// import './MovieList.css';
+
+
+import './fav.css';
 
 
 export default function FavList(props) {
@@ -13,9 +19,8 @@ export default function FavList(props) {
 
   const fetchData = async () => {
     try {
-      // const res =await axios.get(`http://localhost:3008/addMovie`)
       const res =await axios.get(`https://movies-library-1ryn.onrender.com/addMovie`)
-
+  
       console.log(res.data.data);
       setMovies(res.data.data)
   
@@ -30,7 +35,7 @@ export default function FavList(props) {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3008/addMovie/${id}`);
+      await axios.delete(`https://movies-library-1ryn.onrender.com/addMovie/${id}`);
       setMovies(movies => movies.filter(item => item.id !== id));
     } catch (err) {
       console.log(err);
@@ -41,11 +46,11 @@ export default function FavList(props) {
   const handleUpdate = async (id) => {
     try {
       const updatedMovie = {
-        comment: updatedComment,
-        title: movies.find((item) => item.id === id).title, // Retrieve the title from the original movie
+        comments: updatedComment,
+        title: movies.find((item) => item.id === id).title, 
       };
-
-      await axios.put(`http://localhost:3008/addMovie/${id}`, updatedMovie);
+console.log(updatedMovie);
+      await axios.put(`https://movies-library-1ryn.onrender.com/addMovie/${id}`,updatedMovie);
       setMovies((movies) =>
       movies.map((item) => (item.id === id ? { ...item, ...updatedMovie } : item))
       );

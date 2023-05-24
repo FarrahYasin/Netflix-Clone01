@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
+import './MovieList.css';
 
 export default function ModalMovie({ movie, closeModal }) {
   const [comment, setComment] = useState('');
@@ -70,3 +72,4 @@ export default function ModalMovie({ movie, closeModal }) {
     </Modal>
   );
 }
+

@@ -4,3 +4,76 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: none;
+    padding: 1rem;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .img1 {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"],
+  button[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="submit"]:active,
+  button[type="button"]:active {
+    background-color: #2b0099;
+  }
+  
+  .modal-footer {
+    background-color: #f8f9fa;
+    border-top: none;
+    padding: 1rem;
+  }
+
+  
+  .img1 {
+    height:auto;
+    object-fit: cover;
+    border-radius: 5px;
+    padding-left:17%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
