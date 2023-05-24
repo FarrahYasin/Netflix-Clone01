@@ -45,11 +45,11 @@ export default function FavList(props) {
   const handleUpdate = async (id) => {
     try {
       const updatedMovie = {
-        comment: updatedComment,
+        comments: updatedComment,
         title: movies.find((item) => item.id === id).title, 
       };
-
-      await axios.put(`https://movies-library-1ryn.onrender.com/addMovie/${id}`, updatedMovie);
+console.log(updatedMovie);
+      await axios.put(`https://movies-library-1ryn.onrender.com/addMovie/${id}`,updatedMovie);
       setMovies((movies) =>
       movies.map((item) => (item.id === id ? { ...item, ...updatedMovie } : item))
       );
@@ -99,18 +99,3 @@ export default function FavList(props) {
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  

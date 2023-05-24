@@ -40,3 +40,43 @@
   width: 50%;
 padding-left: 5%;    
 }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  margin-top: 10px;
+}
+card-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item {
+  margin-right: 10px; /* Optional: Add margin between cards */
+}
